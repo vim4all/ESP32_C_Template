@@ -11,6 +11,7 @@ static void task_blink(void *arg)
     while (1) {
         my_led_blink(1, 1, 500);
         my_led_blink(2, 1, 500);
+        // Test comment
     }
 }
 
