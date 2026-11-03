@@ -1,0 +1,23 @@
+{
+    "name": "ESP-IDF v6.0.1",
+    "image": "espressif/idf:v6.0.1",
+
+    // The image sets IDF_PATH but only exports the toolchain in its entrypoint;
+    // VS Code terminals don't go through it, so source export.sh from .bashrc.
+    "postCreateCommand": "echo 'source $IDF_PATH/export.sh > /dev/null 2>&1' >> ~/.bashrc",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "espressif.esp-idf-extension",
+                "ms-vscode.cpptools"
+            ],
+            "settings": {
+                "idf.espIdfPath": "/opt/esp/idf",
+                "idf.toolsPath": "/opt/esp",
+                "idf.gitPath": "/usr/bin/git",
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}

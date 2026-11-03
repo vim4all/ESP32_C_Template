@@ -1,0 +1,5 @@
+# ESP32-S3 specific sdkconfig overrides.
+
+# Use the built-in USB Serial/JTAG for the console terminal —
+# no external USB-UART chip required on S3 boards.
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
